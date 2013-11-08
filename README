@@ -11,6 +11,7 @@
         1.3.4. flush privileges; 
     1.4. 계정 패스워드 제대로 설정되었는지 확인해 본다. 
         1.4.1. ./mysql -u root -p
+
 2. JDBC driver 를 설치한다.
     2.1. <JBOSS_HOME>/modules/com/mysql/main 폴더를 생성
     2.2. 해당 폴더에 mysql-connector-java-5.1.17-bin.jar 복사한다. (jar 파일은 예제파일에 함께 포함되어 있다.)
@@ -25,6 +26,7 @@
                 <module name="javax.transaction.api"/>
             </dependencies>
         </module>
+
 3. datasource 정보를 설정한다.
     3.1.  <JBOSS_HOME>/standalone/configuration/standalone.xml 파일의 datasources 부분을 아래와 같이 수정한다.
         <datasources>
@@ -51,8 +53,12 @@
                     <driver name="mysql" module="com.mysql"/>
                 </drivers>
         </datasources>
+
 4. 기본 ROOT 디렉토리 정보를 standalone.xml 파일에서 disable 한다. 
     4.1. <virtual-server name="default-host" enable-welcome-root="true"> 에서 <virtual-server name="default-host" enable-welcome-root="false"> 로 변경한다.
+
 5. 예제파일에 첨부된 build_db.xml 파일을 ant 로 실행하여 예제 데이터를 생성한다.
-6. IDE 에 예제파일을 import 하고 Maven 으로 deploy 를 수행한다.
+
+6. IDE 에 예제파일을 https://github.com/gomkwc/JBossAS7-Demo 에서 Checkout 후 Maven으로 deploy를 수행한다.
+
 7. http://localhost:8080/ 에 접속하여 데이터가 제대로 나오는지 확인한다.
