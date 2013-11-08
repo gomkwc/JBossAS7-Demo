@@ -1,0 +1,6 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<project name="deploy" default="deploy" basedir=".">
+    <target name="deploy">
+        <delete file="/Users/erptimgim-wancheol/jboss7/standalone/deployments/GE.war.skipdeploy" />
+    </target>
+</project>

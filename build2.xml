@@ -1,0 +1,22 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<project name="deploy" default="deploy" basedir=".">
+    <target name="deploy">
+
+        <touch file="${jboss.home}/standalone/deployments/GE.war.skipdeploy" />
+
+        <copy todir="${jboss.home}/standalone/deployments">
+            <fileset dir="target">
+                <include name="${final.name}.war"/>
+            </fileset>
+        </copy>
+
+
+        <copy todir="${tomcat.home}/webapps">
+            <fileset dir="target">
+                <include name="${final.name}.war"/>
+            </fileset>
+        </copy>
+
+
+    </target>
+</project>
