@@ -59,6 +59,6 @@
 
 5. 예제파일에 첨부된 build_db.xml 파일을 ant 로 실행하여 예제 데이터를 생성한다.
 
-6. IDE 에 예제파일을 https://github.com/gomkwc/JBossAS7-Demo 에서 Checkout 후 Maven으로 deploy를 수행한다.
+6. IDE 에 https://github.com/gomkwc/JBossAS7-Demo 에서 Checkout 후 Maven으로 deploy를 수행한다.
 
 7. http://localhost:8080/ 에 접속하여 데이터가 제대로 나오는지 확인한다.
